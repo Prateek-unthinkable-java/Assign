@@ -23,6 +23,12 @@ public class Employee {
         this.department = department;
     }
 
+    public Employee(Long empId, String empName, String empDesn) {
+        this.empId = empId;
+        this.empName = empName;
+        this.empDesn = empDesn;
+    }
+
     public Long getEmpId() {
         return empId;
     }

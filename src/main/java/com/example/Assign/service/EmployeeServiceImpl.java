@@ -42,4 +42,8 @@ public class EmployeeServiceImpl implements EmployeeService{
         Employee entity = employeeRepository.getById(id);
         employeeRepository.delete(entity);
     }
+
+    public EmployeeServiceImpl(EmployeeRepository repo){
+        this.employeeRepository=repo;
+    }
 }
