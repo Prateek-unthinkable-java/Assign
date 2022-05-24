@@ -1,6 +1,8 @@
 package com.example.Assign.repository;
 
+import com.example.Assign.entity.Department;
 import com.example.Assign.entity.Employee;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,9 +18,10 @@ class EmployeeRepositoryTest {
 
     @Test
     void isEmployeeExitsById() {
-        Employee employee=new Employee(1L, "Ravi", "Java Developer");
+
+        Employee employee=new Employee(15l, "Ravi", "Java Developer");
         employeeRepository.save(employee);
-        boolean actual=employeeRepository.isEmployeeExitsById(1L);
+        boolean actual=employeeRepository.isEmployeeExitsById(15l);
         assertThat(actual).isTrue();
     }
 }

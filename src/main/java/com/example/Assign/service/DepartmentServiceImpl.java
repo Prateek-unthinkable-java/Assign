@@ -38,4 +38,8 @@ public class DepartmentServiceImpl implements DepartmentService{
         Department entity = departmentRepository.getById(id);
         departmentRepository.delete(entity);
     }
+
+    public DepartmentServiceImpl(DepartmentRepository repository){
+        this.departmentRepository=repository;
+    }
 }
